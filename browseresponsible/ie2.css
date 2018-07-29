@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.container form div {
+	background-image: url(images/ie/emailback.gif);
+}
+
+#chrome .box {
+	background-image: url(images/ie/google.gif);
+}
+
+#firefox .box {
+	background-image: url(images/ie/firefox.gif);
+}
+
+#safari .box {
+	background-image: url(images/ie/safari.gif);
+}
+
+#ie .box {
+	background-image: url(images/ie/ie.gif);
+}
+
+#opera .box {
+	background-image: url(images/ie/opera.gif);
+}

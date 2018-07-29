@@ -1,0 +1,389 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+	@font-face {
+    font-family: "droid";
+    src: url("../fonts/DroidSans.ttf"); /* TTF file for CSS3 browsers */
+	font-weight:normal;
+	}
+	
+	@font-face {
+    font-family: "vibes";
+    src: url("../fonts/GreatVibes-Regular.ttf"); /* TTF file for CSS3 browsers */
+	font-weight:normal;
+	}
+	
+	@font-face {
+    font-family: "sofia";
+    src: url("../fonts/Sofia-Regular.ttf"); /* TTF file for CSS3 browsers */
+	font-weight:normal;
+	}
+	
+	@font-face {
+    font-family: "sand";
+    src: url("../fonts/Quicksand-Light.ttf"); /* TTF file for CSS3 browsers */
+	font-weight:normal;
+	}
+	
+	body {width:100%;font-family: 'sand','Quicksand' ;background-color:#fff4f4;color:black;}
+	
+	#header {background:url(../img/blackback2.jpg);padding-top:5px; padding-bottom:1px; min-width:100%; border-bottom:dashed 10px white;}
+	
+	hr {border-top:dashed 1px lightgrey;}
+	
+	#header .social {text-align:right; color:white; width:960px; margin:0px auto; }
+	#header .social a {padding:5px;}
+	#header .name {text-align:center; color:white; width:960px; margin:0px auto; }
+	#header .name h1 {font-size:7em;margin:0px;letter-spacing:6px;font-family: 'vibes','Great Vibes';font-weight:100;}
+	#header .name h1 {text-shadow: 6px 6px 0px rgba(0,0,0,0.6);filter:DropShadow(Color=#000000, OffX=6, OffY=6);}
+	#header .slogan {text-align:right; color:white; width:700px; margin:0px auto;font-size:1.2em;padding:0px;letter-spacing:4px;}
+	#header .slogan {text-shadow: 4px 4px 0px rgba(0,0,0,0.6);}
+	#header .slogan h4 {padding:0px;}
+	
+	#section1 { padding:10px 0px; min-width:100%; min-height: 600px;font-family: 'sand';font-weight:100;font-family: 'Quicksand', sans-serif;}
+	#section1 .content {margin:0px auto;width:960px;}
+	#section1 .btitle {padding:0px 5px;text-align:center;}
+	#section1 .btitle h4{font-size:1.5em;font-weight:400;}
+	#section1 .btitle h2 {padding:0px; margin:0px; font-size:3em; letter-spacing:3px;font-family:'Quicksand';font-weight:100;text-shadow: 4px 4px 0px rgba(0,0,0,0.2);}
+	#section1 .btitle hr {margin:0px; padding:0px;}
+	
+	#section1 .books {width:960px; margin:0px auto; margin-top:20px; font-size:1.3em;text-align:center;}
+	#section1 .books .book {padding:0px 0px; }
+	#section1 .books h2 {font-size:1.1em;text-align:left;font-weight:400;}
+	#section1 .babout {text-align:center;float:left;width:70%;padding-top:0px;font-size:1.3em;font-weight:400;} 
+	#section1 .bbook {float:right;text-align:center;width:30%;font-size:.8em;font-weight:400;}
+	#section1 .rhead {font-family: 'sand', cursive;font-weight:100;border-bottom:1px dashed lightgrey;font-family: 'Quicksand', sans-serif;}
+	#section1 .rhead span {padding:5px;font-size:1.3em;}
+	#section1 .reviews {width:960px;font-weight:100;font-family: 'Droid Sans Mono', sans-serif;}
+	#section1 .review {font-size:.8em; background-color:#CDCDC1;color:black;padding:8px; width:30%;float:left; margin:0px 5px;} 
+	#section1 .purchase {width:960px; margin:0px auto; font-size:1.2em; padding:10px 0;}
+	#section1 .clearfix {width:1px;}	
+	
+	#section2 {padding:10px 0px; min-width:100%; min-height:500px;font-family: 'sand';font-weight:100;font-family: 'Quicksand', sans-serif;}
+	#section2 .content {margin:0px auto; width:960px;text-align:center;}
+	#section2 .content .btitle h1{font-weight:100;font-family: 'vibes', 'Great Vibes';font-size:2em;text-shadow: 3px 3px 0px rgba(0,0,0,0.2);}
+	#section2 .content hr {margin:.5em 0;}
+	#section2 .content .bpic { float:right; }
+	#section2 .content .bpic .biopic {margin: 10px;}
+	#section2 .bio {font-size:1.3em;text-align:left;font-weight:400;}
+	
+	#section3 {padding:10px 0px; min-width:100%; min-height:500px;font-family: 'sand';font-weight:100;font-family: 'Quicksand', sans-serif;}
+	#section3 {background:url(../img/blackback2.jpg);border-bottom:double 20px white;border-top:double 20px white;color:white;}
+	#section3 .content {margin:0px auto; width:960px; text-align:center;padding:10px 0px;}
+	#section3 .content div {margin:0px 5px;}
+	#section3 .content .sectitle h1 {font-weight:100;text-shadow: 3px 3px 0px rgba(0,0,0,0.6); font-family: 'vibes', 'Great Vibes';font-size:2.5em;margin:0px;padding:0px;}
+	#section3 .content .books {float:left; width:30%;text-align:center;} 
+	#section3 .content .books {min-height:300px;width:225px;} 
+	#section3 .content .excerpt {text-align:center;font-size:1em;padding:5px;font-weight:400;}
+	#section3 .content .excerpt span {}
+	#section3 .content .excerpt p {margin:0px;text-align:left;font-size:.8em;font-family: 'Droid Sans Mono', sans-serif;}
+	
+	#section3 .content .books .book {position:relative; }
+	
+	#footer {padding:5px 0px 0px 0px; min-width:100%; min-height:50px; background-color:purple;border-top: dashed 10px white;position:relative; }
+	#footer {background:url(../img/blackback2.jpg);}
+	#footer .note {width:960px; text-align:right; color:white; margin:0px auto;padding:10px 0px;position:relative; bottom:0px;right:0px;font-size:.8em;font-family: 'Droid Sans Mono', sans-serif;}
+	
+	a {color:maroon; text-decoration:none;}
+	a:hover {color:orange; text-decoration:none;}
+	
+	#footer a {color:white;}
+	#section3 a {font-size:1em; background-color:white;padding:5px 15px; color:black;margin:5px 0px;font-family: 'sand','Quicksand';font-weight:bold;}
+	
+	.shadow {
+		-moz-box-shadow: 3px 3px 4px #000;
+		-webkit-box-shadow: 3px 3px 4px #000;
+		box-shadow: 3px 3px 4px #000;
+		/* For IE 8 */
+		-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	}
+
+	
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

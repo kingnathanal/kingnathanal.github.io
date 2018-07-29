@@ -1,0 +1,184 @@
+<?php 
+	include("func/checkBv.php");
+	include("func/functions.php");
+	
+	session_start();
+	require_once('func/dblogin.php'); //Inserts Database login
+	$dbc = connect(HOSTNAME,USER,PASS,DATABASE);
+	//$dbc = connect($db_hostname, $db_username,$db_password, $db_database);
+	checkdbc($dbc);
+?>
+
+<?php
+	if(isset($_POST['sub'])) {
+		
+		$email = $_POST['email'];
+		$message = checkEmail($email, $dbc);
+	}
+?>
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- Welcome to Browse Resposible code backend-->
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="description" content="Keep up with the latest in browsers with Browse Responsible." />
+<meta name="author" content="Egotistik.com" />
+
+<title>Browse Responsible: Safe. Secure. Fast. Browsing!</title>
+
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--[if lt IE 8]>
+<link rel="stylesheet" href="ie.css" type="text/css" media="screen" />
+<![endif]-->
+
+<!--[if lt IE 7]>
+<link rel="stylesheet" href="ie2.css" type="text/css" media="screen" />
+<![endif]-->
+</head>
+ 
+<body>
+
+<!-- the header -->
+<header>
+<div id="header">
+	<p><?php echo $yourbrowser ?></p>
+   <h1><span>Browse</span> Responsible</h1>
+	<h2>Safe. Secure. Fast. <span>Browsing For The World!</span></h2>
+</div>
+ </header>
+ 
+<!-- main content of the page -->
+<article>
+<div id="content">
+    <div class="container">
+	
+			<?php 
+					echo $message; 
+			?>
+		<form id='myform' method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+				<div>
+				<label><span>Enter your email address below to receive the latest browser updates when they happen.</span></label><br /><br /><br />
+				<input id="email" name="email" type="text" autocomplete="off" placeholder="Enter your email address" value="Enter your email address" 
+                		onfocus="if(this.value=='Enter your email address'){this.value=''}"  onBlur="if(this.value==''){this.value='Enter your email address'}" />
+                        
+				<input type="submit" name="sub" value="Sign Up" class="button" />
+				</div>
+		</form>
+		
+		
+ 		<div class="list">
+		<ul>
+			<li id="chrome">
+				<a href="http://www.google.com/chrome" title="Google Chrome">
+					<div class="box"></div>
+					<p class="name">Google Chrome</p>
+                    <div class="dec"><?php echo $cdec; ?></div><br />
+					<div>
+                    	<p>Current Version <strong><?php echo $browser['chrome']; ?></strong></p><br />
+                    	<p><span>Click for more info</span></p>
+                    </div>
+				</a>	
+			</li>
+			<li id="firefox">
+				<a href="http://www.firefox.com/" title="Mozilla Firefox">
+					<div class="box"></div>
+					<p class="name">Mozilla Firefox</p>
+                    <div class="dec"><?php echo $fdec; ?></div><br />
+					<div>
+                    	<p>Current Version <strong><?php echo $browser['firefox']; ?></strong></p><br />                    
+						<p><span>Click for more info</span></p>
+                    </div>
+				</a>
+			</li>
+			<li id="ie">
+				<a href="http://www.microsoft.com/windows/internet-explorer/" title="Microsoft Internet Explorer">
+					<div class="box"></div>
+					<p class="name">Internet Explorer</p>
+                    <div class="dec"><?php echo $idec; ?></div><br />
+					<div>
+                    	<p>Current Version <strong><?php echo $browser['ie']; ?></strong></p><br />
+                    	<p><span>Click for more info</span></p>
+                    </div>
+				</a>
+			</li>
+			<li id="safari">
+				<a href="http://www.apple.com/safari/" title="Apple Safari">
+					<div class="box"></div>
+					<p class="name">Apple Safari</p>
+                    <div class="dec"><?php echo $sdec; ?></div><br />
+                    <div>
+						<p>Current Version <strong><?php echo $browser['safari']; ?></strong></p><br />
+						<p><span>Click for more info</span></p>
+                    </div>
+				</a>
+			</li>
+			<li id="opera">
+				<a href="http://www.opera.com/" title="Opera">
+					<div class="box"></div>
+					<p class="name">Opera</p>
+                    <div class="dec"><?php echo $odec; ?></div><br />
+					<div>
+                    	<p>Current Version <strong><?php echo $browser['opera']; ?></strong></p><br />                 
+						<p><span>Click for more info</span></p>
+                   	</div>
+				</a>
+			</li>
+		</ul>
+		</div>
+		<br class="clearfloat" />
+	</div>
+    </div>
+	
+ </article>
+ 
+<!-- footer -->
+<footer>
+<div id="footer">
+    <div class="fcontainer">
+		<div class="para">
+		<p>Browse <span>Responsible!</span><br /><br />We all have more important things in our lives to do then to keep up with browsers.
+			But now a superhero comes not afraid to keep up with them for you. All your favorite
+			browsers in one place so you don't have to make another click or two.<br /><br />
+			Having the latest browsers insures that you are viewing secure, and the information you are
+			passing is protected and private. Most of all you get to enjoy all the beauty the web has to offer.<br /><br />
+			</p>
+        <p>We hate spam just as much as you, we promise not to sell your information to absolutely no one! If you would like to be removed from the listing click <a href="remove.php" title="Remove">here</a></p><br />
+        <p class="company">Powered by: Universal Mindz & <a href="http://www.egotistik.com">Egotistik.com</a> on <?php  print $myDate; ?></p>
+		</div>
+		<div class="twitter">
+		<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+		<div>
+		   <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.browseresponsible.com" data-count="none">Tweet</a>
+		</div>
+        
+        
+		</div>
+    </div>
+
+</div>
+ </footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20250634-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

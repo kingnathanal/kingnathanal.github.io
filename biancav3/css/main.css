@@ -1,0 +1,446 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+	@font-face {
+    font-family: "droid";
+    src: url("../fonts/DroidSans.ttf"); /* TTF file for CSS3 browsers */
+	font-weight:normal;
+	}
+	
+	@font-face {
+    font-family: "vibes";
+    src: url("../fonts/GreatVibes-Regular.ttf"); /* TTF file for CSS3 browsers */
+	font-weight:normal;
+	}
+	
+	@font-face {
+    font-family: "sofia";
+    src: url("../fonts/Sofia-Regular.ttf"); /* TTF file for CSS3 browsers */
+	font-weight:normal;
+	}
+	
+	@font-face {
+    font-family: "sand";
+    src: url("../fonts/Quicksand-Light.ttf"); /* TTF file for CSS3 browsers */
+	font-weight:normal;
+	}
+	
+	body {width:100%;font-family: 'sand','Quicksand' ;background-color:#FFF6E5;color:black;}
+	
+	#header {background:url(../img/blackback3.jpg) center;padding-top:5px; padding-bottom:1px; min-width:100%;}
+	
+	hr {border-top:dashed 1px black;}
+	#section3 hr {border-top:dashed 1px lightgray;}
+	#footer hr {border-top:dashed 1px lightgray;}
+	
+	#header .innerh {width:960px;margin:0px auto;}
+	#header .social {text-align:right; color:white; width:960px; margin:0px auto; }
+	#header .social a {padding:5px;}
+	#header .name {text-align:center; color:white; width:960px; margin:0px auto; }
+	#header .name h1 {font-size:7em;margin:0px;letter-spacing:6px;font-family: 'vibes','Great Vibes';font-weight:100;}
+	#header .name h1 {text-shadow: 6px 6px 0px rgba(0,0,0,0.6);filter:DropShadow(Color=#000000, OffX=6, OffY=6);}
+	#header .slogan {text-align:right; color:white; width:700px; margin:0px auto;font-size:1.2em;padding:0px;letter-spacing:4px;}
+	#header .slogan {text-shadow: 4px 4px 0px rgba(0,0,0,0.6);}
+	#header .slogan h4 {padding:0px;}
+	
+	#section1 { background:url(../img/bia6.jpg) center top no-repeat;margin-top:-10px;}
+	#section1 { padding:10px 0px; min-width:100%; min-height: 1090px;font-family: 'sand';font-weight:100;font-family: 'Quicksand', sans-serif;}
+	#section1 .content {margin:0px auto;width:560px;}
+	#section1 .btitle {padding:0px 5px;text-align:center;}
+	#section1 .btitle h4{font-size:1.5em;font-weight:400;}
+	#section1 .btitle h2 {padding:0px; margin:0px; font-size:3em; letter-spacing:3px;font-family:'Quicksand';font-weight:100;text-shadow: 4px 4px 0px rgba(0,0,0,0.2);background-color:white;}
+	#section1 .btitle hr {margin:0px; padding:0px;}
+	
+	#section1 .books {width:760px; margin:0px auto; margin-top:20px; font-size:1.3em;text-align:center;}
+	#section1 .books .book {padding:0px 0px; }
+	#section1 .books h2 {font-size:1.1em;text-align:left;font-weight:400;}
+	#section1 .babout {text-align:left;float:left;padding-top:0px;font-size:.9em;font-weight:800;margin-top:-20px;margin-left:-155px;padding:5px;} 
+	#section1 .babout .btitle{ font-size:1.2em; font-style:italic; border-bottom:1px dotted gray;font-weight:700;}
+	#section1 .babout .inner{ font-size:.85em;}
+	#section1 .bbook {text-align:center;font-size:1.2em;font-weight:400;width:100%;}
+	#section1 .rhead {font-family: 'sand', cursive;font-weight:100;border-bottom:1px dashed lightgray;font-family: 'Quicksand', sans-serif;}
+	#section1 .rhead span {padding:5px;font-size:1.3em;}
+	#section1 .reviews {text-align:center;margin:0px auto; width:960px;font-weight:100;font-family:Helvetica, Arial, sans-serif;}
+	#section1 .reviews h2 {font-size:1em;letter-spacing:5px;}
+	#section1 .review {text-align:left;font-size:.8em;padding:8px; width:30%;float:left; margin:0px 4px;font-weight:700;} 
+	#section1 .purchase {width:960px; margin:0px auto; font-size:1.2em; padding:10px 0;}
+	#section1 .clearfix {width:1px;}	
+	#section1 .middle {background-color:#FFF6E5;width:98%;position:absolute;left:0px;margin-top:-50px; padding:10px;opacity:0.8;filter:alpha(opacity=80); /* For IE8 and earlier */}
+	#section1 .bb {float:right;width:32%;margin:0px;font-size:.8em;}
+	#section1 .bb2 {float:right;width:50%;margin:0px;font-size:.8em;}
+	#section1 .amazon {width:60%;}
+	#section1 .atlast {width:70%;}
+	
+	#section2 {padding:10px 0px; min-width:100%; min-height:500px;font-family: 'sand';font-weight:100;font-family: 'Quicksand', sans-serif;}
+	#section2 .content {margin:0px auto; width:960px;text-align:center;}
+	#section2 .content .btitle h1{font-weight:100;font-family: 'vibes', 'Great Vibes';font-size:2.5em;text-shadow: 3px 3px 0px rgba(0,0,0,0.2);}
+	#section2 .content hr {margin:.5em 0;}
+	#section2 .content .bpic { float:right; }
+	#section2 .content .bpic .biopic {margin: 10px;}
+	#section2 .bio {font-size:1.3em;text-align:left;font-weight:400;}
+	
+	#section3 {padding:10px 0px; min-width:100%; min-height:450px;font-family: 'sand';}
+	#section3 {background:url(../img/blackback4.jpg) center;border-bottom:double 10px #FFF6E5;border-top:double 10px #FFF6E5;color:white;}
+	#section3 .content {margin:0px auto; width:960px; text-align:center;padding:10px 0px;}
+	#section3 .content div {margin:0px 0px;}
+	#section3 .content .sectitle h1 {font-weight:100;text-shadow: 3px 3px 0px rgba(0,0,0,0.6); font-family: 'vibes', 'Great Vibes';font-size:2.5em;margin:0px;padding:0px;}
+	#section3 .content .books {float:left;width:30%;text-align:center;margin-left:5px;} 
+	#section3 .content .books {min-height:500px;width:460px;} 
+	#section3 .content .excerpt {text-align:left;padding:0px;}
+	#section3 .content .excerpt span {font-size:1.4em;text-align:center; font-weight:700;}
+	#section3 .content .excerpt p {margin:0px;text-align:left;font-family: 'Quicksand', sans-serif;padding:0px;}
+	#section3 .content .excerpt .hn {background:none;color:white;height:400px;overflow:auto;padding:5px;font-size:1.0em;font-weight:100;font-family: 'Droid Sans Mono', sans-serif;}
+	#section3 .content .books .book {position:relative; }
+	
+	#footer {padding:5px 0px 0px 0px; min-width:100%; min-height:50px; background-color:purple;position:relative; }
+	#footer {background:url(../img/blackback4.jpg) center;}
+	#footer .note {width:960px; text-align:right; color:white; margin:0px auto;padding:10px 0px;position:relative; bottom:0px;right:0px;font-size:.8em;font-family: 'Droid Sans Mono', sans-serif;}
+	
+	a {color:maroon; text-decoration:none;}
+	a:hover {color:orange; text-decoration:none;}
+	
+	#footer a {color:white;}
+	#section3 a {font-size:1em; background-color:white;padding:5px 15px; color:black;margin:5px 0px;font-family: 'sand','Quicksand';font-weight:bold;}
+	
+	.shadow {
+		-moz-box-shadow: 3px 3px 4px #000;
+		-webkit-box-shadow: 3px 3px 4px #000;
+		box-shadow: 3px 3px 4px #000;
+		/* For IE 8 */
+		-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	}
+
+	.shadow2 {
+		-moz-box-shadow: 0px 6px 6px grey;
+		-webkit-box-shadow: 0px 6px 6px grey;
+		box-shadow: 0px 6px 6px grey;
+	}
+	
+	.shadow3 {
+		-moz-box-shadow: 0px 6px 6px grey;
+		-webkit-box-shadow: 0px 6px 6px grey;
+		box-shadow: 0px 6px 6px grey;
+	}
+
+
+
+
+	#accordion .ui-accordion-content { background:none;font-weight:500;color:white;padding:.5em; font-size:.8em;font-family: 'Droid Sans Mono', sans-serif;margin:0px;}
+	
+	#accordion .ui-accordion-header { background:grey; color:white; padding-top:5px; padding-bottom:5px;}
+
+	    #accordion .ui-accordion-header a {  
+        text-shadow: 1px 1px 0px rgba(0,0,0,0.2);  
+        text-shadow: 1px 1px 0px rgba(0,0,0,0.2);  
+        border-right: 1px solid rgba(0, 0, 0, .2);  
+        border-left: 1px solid rgba(0, 0, 0, .2);  
+        border-bottom: 1px solid rgba(0, 0, 0, .2);  
+        border-top: 1px solid rgba(250, 250, 250, .2);  
+    } 
+
+	    #accordion .ui-accordion-header {  
+        background-color: #ccc;  
+        margin: 0px;  
+    }  
+	
+	    #accordion .ui-accordion-header a {  
+        color: #fff;  
+        line-height: 42px;  
+        display: block;  
+        font-size: 12pt;  
+        width: 100%;  
+        text-indent: 10px;  
+    }  
+	
+	#accordion .ui-accordion-header {  
+    background-color: #fa9300;  
+    background-image: -moz-linear-gradient(top,  #fa9300 0%, #dc621e 100%); /* FF3.6+ */  
+    background-image: -webkit-gradient(linear, left top, left bottombottom, color-stop(0%,#fa9300), color-stop(100%,#dc621e)); /* Chrome,Safari4+ */  
+    background-image: -webkit-linear-gradient(top,  #fa9300 0%,#dc621e 100%); /* Chrome10+,Safari5.1+ */  
+    background-image: -o-linear-gradient(top,  #fa9300 0%,#dc621e 100%); /* Opera 11.10+ */  
+    background-image: -ms-linear-gradient(top,  #fa9300 0%,#dc621e 100%); /* IE10+ */  
+    background-image: linear-gradient(to bottombottom,  #fa9300 0%,#dc621e 100%); /* W3C */  
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fa9300', endColorstr='#dc621e',GradientType=0 ); /* IE6-9 */  
+}
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
