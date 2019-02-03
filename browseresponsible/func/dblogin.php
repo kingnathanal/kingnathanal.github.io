@@ -14,7 +14,7 @@ define("EMAIL", 'browseresponsible@browseresponsible.com');
 define("HOSTNAME", 'kingnathanldbserver.mysql.database.azure.com');
 define("DATABASE",'kingnathanaldb'); 		
 define("USER", 'kingnathanal@kingnathanldbserver'); 
-define("PASS",'Kingnate1984');
+define("PASS",'');
 
 
 ?>
