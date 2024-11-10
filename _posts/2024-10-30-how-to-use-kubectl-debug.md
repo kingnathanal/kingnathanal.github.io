@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "How to Use `kubectl debug` to Access a Kubernetes Node and Take a TCP Dump"
-permalink: /2024-10-30-how-to-use-kubectl-debug
 ---
 
 # How to Use `kubectl debug` to Access a Kubernetes Node and Take a TCP Dump
