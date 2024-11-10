@@ -3,8 +3,6 @@ layout: post
 title:  "How to Use `kubectl debug` to Access a Kubernetes Node and Take a TCP Dump"
 ---
 
-# How to Use `kubectl debug` to Access a Kubernetes Node and Take a TCP Dump
-
 I recently had to troubleshoot network issues on an AKS cluster without direct access to the nodes. Initially, I thought I would need to create SSH keys and inject them into the nodes, which usually requires adding keys during cluster creation. Since this was a production cluster with live traffic, I wanted to minimize any changes. It was starting to seem like a complex task, and I wanted an easier solution. After doing a few Google searches, I stumbled across `kubectl debug`. In this post, I'll guide you through how to use `kubectl debug` to log into a cluster node and run diagnostics like `tcpdump`.
 
 ## What is `kubectl debug`?
